@@ -1,0 +1,109 @@
+  :root {
+            --primary: #4f8cff;
+            --secondary: #040505;
+            --accent: #f0f0f4;
+            --text: #fff;
+            --card-bg: #030202;
+            --shadow: 0 4px 24px rgba(254, 251, 251, 0.567);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--secondary);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 0 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem 2rem;
+        }
+        .about-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .about-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .about-header p {
+            font-size: 1.15rem;
+            color: var(--accent);
+            opacity: 0.85;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            
+        }
+        .about-section {
+            flex: 1 1 260px;
+            background: var(--secondary);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem 1.2rem;
+            min-width: 260px;
+            margin-bottom: 1rem;
+        }
+        .about-section h2 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .about-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .about-section li {
+            margin-bottom: 0.7rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .about-section li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        .about-me {
+            margin-bottom: 2rem;
+            font-size: 1.08rem;
+            line-height: 1.7;
+            color: var(--accent);
+            background: var(--secondary);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(79,140,255,0.06);
+            padding: 1.5rem 1.2rem;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 1.5rem 0.5rem;
+            }
+            .about-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .about-header h1 {
+                font-size: 2rem;
+            }
+            .about-section, .about-me {
+                padding: 1rem 0.7rem;
+            }
+        }
